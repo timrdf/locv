@@ -13,6 +13,6 @@ export PATH=$PATH`/home/locv/opt/prizms/bin/install/paths.sh`
 export CLASSPATH=$CLASSPATH`/home/locv/opt/prizms/bin/install/classpaths.sh`
 export CSV2RDF4LOD_HOME="/home/locv/opt/prizms/repos/csv2rdf4lod-automation"
 export DATAFAQS_HOME="/home/locv/opt/prizms/repos/DataFAQs"
-export CSV2RDF4LOD_PUBLISH_VIRTUOSO=''
+export CSV2RDF4LOD_PUBLISH_VIRTUOSO="true"
 export CSV2RDF4LOD_PUBLISH_SUBSET_SAMPLES=''
 export JENAROOT=/home/locv/opt/apache-jena-2.10.0
