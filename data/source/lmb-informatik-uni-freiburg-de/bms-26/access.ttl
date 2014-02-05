@@ -1,0 +1,25 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix nfo:        <http://www.semanticdesktop.org/ontologies/nfo/#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://locv.tw.rpi.edu/id/> .
+
+<http://locv.tw.rpi.edu/source/lmb-informatik-uni-freiburg-de/dataset/bms-26>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "lmb-informatik-uni-freiburg-de";
+   conversion:dataset_identifier "bms-26";
+   prov:wasDerivedFrom :download_2a18855372e76b3f78fc32bc82a296c7;
+.
+
+:download_2a18855372e76b3f78fc32bc82a296c7
+   a dcat:Distribution;
+   dcat:downloadURL <http://lmb.informatik.uni-freiburg.de/resources/datasets/moseg_dataset.zip>;
+.
+
+<dataset/2a18855372e76b3f78fc32bc82a296c7>
+   a dcat:Dataset;
+   dcat:distribution :download_2a18855372e76b3f78fc32bc82a296c7;
+.
