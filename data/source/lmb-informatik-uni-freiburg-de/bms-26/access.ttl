@@ -5,9 +5,9 @@
 @prefix nfo:        <http://www.semanticdesktop.org/ontologies/nfo/#> .
 @prefix prov:       <http://www.w3.org/ns/prov#> .
 @prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
-@prefix :           <http://localhost/id/> .
+@prefix :           <http://locv.tw.rpi.edu/id/> .
 
-<http://localhost/source/lmb-informatik-uni-freiburg-de/dataset/bms-26>
+<http://locv.tw.rpi.edu/source/lmb-informatik-uni-freiburg-de/dataset/bms-26>
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "lmb-informatik-uni-freiburg-de";
    conversion:dataset_identifier "bms-26";

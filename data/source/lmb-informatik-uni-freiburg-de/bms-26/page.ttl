@@ -4,8 +4,8 @@
 @prefix void:       <http://rdfs.org/ns/void#> .
 @prefix prov:       <http://www.w3.org/ns/prov#> .
 @prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
-@prefix :           <http://localhost/id/> .
+@prefix :           <http://locv.tw.rpi.edu/id/> .
 
-<http://localhost/source/lmb-informatik-uni-freiburg-de/dataset/bms-26>
+<http://locv.tw.rpi.edu/source/lmb-informatik-uni-freiburg-de/dataset/bms-26>
    foaf:page <http://lmb.informatik.uni-freiburg.de/resources/datasets/moseg.en.html>;
 .
