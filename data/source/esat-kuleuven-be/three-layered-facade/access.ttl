@@ -1,0 +1,25 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix nfo:        <http://www.semanticdesktop.org/ontologies/nfo/#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://locv.tw.rpi.edu/id/> .
+
+<http://locv.tw.rpi.edu/source/esat-kuleuven-be/dataset/three-layered-facade>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "esat-kuleuven-be";
+   conversion:dataset_identifier "three-layered-facade";
+   prov:wasDerivedFrom :download_5b814bb132e69e08167c11df39c1511b;
+.
+
+:download_5b814bb132e69e08167c11df39c1511b
+   a dcat:Distribution;
+   dcat:downloadURL <http://homes.esat.kuleuven.be/~amartino/datasets/ECP_newAnnotations.zip>;
+.
+
+<dataset/5b814bb132e69e08167c11df39c1511b>
+   a dcat:Dataset;
+   dcat:distribution :download_5b814bb132e69e08167c11df39c1511b;
+.
