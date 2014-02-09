@@ -76,10 +76,10 @@
       #   conversion:symbol        "";
       #   conversion:interpretation conversion:null; 
       #];
-      #conversion:enhance [
-      #   conversion:domain_template "thing_[r]";
-      #   conversion:domain_name     "Thing";
-      #];
+      conversion:enhance [
+         conversion:domain_template "[/sd][#1]/[#2]/[#3]/[#4]";
+         conversion:domain_name     prov:Derivation;
+      ];
       #conversion:enhance [
       #   conversion:class_name "Thing";
       #   conversion:subclass_of <http://purl.org/...>;
@@ -87,13 +87,13 @@
       conversion:enhance [
          ov:csvCol          1;
          ov:csvHeader       "Originator";
-         #conversion:bundled_by [ ov:csvCol 1 ];
+         conversion:bundled_by [ ov:csvCol 2 ];
          #conversion:label   "Originator";
-         #conversion:equivalent_property dcterms:identifier;
+         conversion:equivalent_property prov:wasAttributedTo;
          #conversion:subproperty_of      dcterms:identifier;
          conversion:comment "";
-         #conversion:range_template  "[/sd]thing[.]";
-         conversion:range   todo:Literal;
+         conversion:range_template  "[/]source/[.]";
+         conversion:range   prov:Agent;
          #conversion:range_name  "Thing";
       ];
       conversion:enhance [
@@ -101,23 +101,23 @@
          ov:csvHeader       "Dataset";
          #conversion:bundled_by [ ov:csvCol 1 ];
          #conversion:label   "Dataset";
-         #conversion:equivalent_property dcterms:identifier;
+         conversion:equivalent_property prov:entity;
          #conversion:subproperty_of      dcterms:identifier;
          conversion:comment "";
-         #conversion:range_template  "[/sd]thing[.]";
-         conversion:range   todo:Literal;
+         conversion:range_template  "[/]source/[#1]/dataset/[.]";
+         conversion:range   dcat:Dataset;
          #conversion:range_name  "Thing";
       ];
       conversion:enhance [
          ov:csvCol          3;
          ov:csvHeader       "Deriver";
-         #conversion:bundled_by [ ov:csvCol 1 ];
+         conversion:bundled_by [ ov:csvCol 4 ];
          #conversion:label   "Deriver";
-         #conversion:equivalent_property dcterms:identifier;
+         conversion:equivalent_property prov:wasAttributedTo;
          #conversion:subproperty_of      dcterms:identifier;
          conversion:comment "";
-         #conversion:range_template  "[/sd]thing[.]";
-         conversion:range   todo:Literal;
+         conversion:range_template  "[/]source/[.]";
+         conversion:range   prov:Agent;
          #conversion:range_name  "Thing";
       ];
       conversion:enhance [
@@ -125,11 +125,12 @@
          ov:csvHeader       "Dataset";
          #conversion:bundled_by [ ov:csvCol 1 ];
          #conversion:label   "Dataset";
-         #conversion:equivalent_property dcterms:identifier;
+         conversion:equivalent_property prov:qualifiedDerivationOf;
+         conversion:inverse_of          prov:qualifiedDerivation;
          #conversion:subproperty_of      dcterms:identifier;
          conversion:comment "";
-         #conversion:range_template  "[/sd]thing[.]";
-         conversion:range   todo:Literal;
+         conversion:range_template  "[/]source/[#3]/dataset/[.]";
+         conversion:range   dcat:Dataset;
          #conversion:range_name  "Thing";
       ];
       conversion:enhance [
@@ -137,11 +138,11 @@
          ov:csvHeader       "Reason";
          #conversion:bundled_by [ ov:csvCol 1 ];
          #conversion:label   "Reason";
-         #conversion:equivalent_property dcterms:identifier;
+         conversion:equivalent_property dcterms:description;
          #conversion:subproperty_of      dcterms:identifier;
          conversion:comment "";
          #conversion:range_template  "[/sd]thing[.]";
-         conversion:range   todo:Literal;
+         conversion:range   rdfs:Literal;
          #conversion:range_name  "Thing";
       ];
       #conversion:enhance [
