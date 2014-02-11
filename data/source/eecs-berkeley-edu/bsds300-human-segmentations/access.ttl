@@ -1,0 +1,76 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix nfo:        <http://www.semanticdesktop.org/ontologies/nfo/#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://locv.tw.rpi.edu/id/> .
+
+<http://locv.tw.rpi.edu/source/eecs-berkeley-edu/dataset/bsds300>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "eecs-berkeley-edu";
+   conversion:dataset_identifier "bsds300";
+   prov:wasDerivedFrom :download_3b225c2b6f15d1f2e55e3e559e822839;
+.
+
+:download_3b225c2b6f15d1f2e55e3e559e822839
+   a dcat:Distribution;
+   dcat:downloadURL <bsds300-images>;
+.
+
+<dataset/3b225c2b6f15d1f2e55e3e559e822839>
+   a dcat:Dataset;
+   dcat:distribution :download_3b225c2b6f15d1f2e55e3e559e822839;
+.
+
+<http://locv.tw.rpi.edu/source/eecs-berkeley-edu/dataset/bsds300>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "eecs-berkeley-edu";
+   conversion:dataset_identifier "bsds300";
+   prov:wasDerivedFrom :download_5bbb4a74f60c7149a549e29a0109c171;
+.
+
+:download_5bbb4a74f60c7149a549e29a0109c171
+   a dcat:Distribution;
+   dcat:downloadURL <http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/segbench/BSDS300-images.tgz>;
+.
+
+<dataset/5bbb4a74f60c7149a549e29a0109c171>
+   a dcat:Dataset;
+   dcat:distribution :download_5bbb4a74f60c7149a549e29a0109c171;
+.
+
+<http://locv.tw.rpi.edu/source/eecs-berkeley-edu/dataset/bsds300>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "eecs-berkeley-edu";
+   conversion:dataset_identifier "bsds300";
+   prov:wasDerivedFrom :download_dfdaf3ad2ffa1fd3427f787372fc3bc1;
+.
+
+:download_dfdaf3ad2ffa1fd3427f787372fc3bc1
+   a dcat:Distribution;
+   dcat:downloadURL <bsds300-human-segmentations>;
+.
+
+<dataset/dfdaf3ad2ffa1fd3427f787372fc3bc1>
+   a dcat:Dataset;
+   dcat:distribution :download_dfdaf3ad2ffa1fd3427f787372fc3bc1;
+.
+
+<http://locv.tw.rpi.edu/source/eecs-berkeley-edu/dataset/bsds300>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "eecs-berkeley-edu";
+   conversion:dataset_identifier "bsds300";
+   prov:wasDerivedFrom :download_7cc2180a30a30d9edd682055e2bc4a4c;
+.
+
+:download_7cc2180a30a30d9edd682055e2bc4a4c
+   a dcat:Distribution;
+   dcat:downloadURL <http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/segbench/BSDS300-human.tgz>;
+.
+
+<dataset/7cc2180a30a30d9edd682055e2bc4a4c>
+   a dcat:Dataset;
+   dcat:distribution :download_7cc2180a30a30d9edd682055e2bc4a4c;
+.
