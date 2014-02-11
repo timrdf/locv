@@ -1,0 +1,25 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix nfo:        <http://www.semanticdesktop.org/ontologies/nfo/#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://locv.tw.rpi.edu/id/> .
+
+<http://locv.tw.rpi.edu/source/github-com-danvil/dataset/dasp>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "github-com-danvil";
+   conversion:dataset_identifier "dasp";
+   prov:wasDerivedFrom :download_14ee3c95311a756edc9b65af4d92b9f9;
+.
+
+:download_14ee3c95311a756edc9b65af4d92b9f9
+   a dcat:Distribution;
+   dcat:downloadURL <https://content.wuala.com/contents/Danvil/Public/dasp/dasp_rgbd_dataset.7z>;
+.
+
+<dataset/14ee3c95311a756edc9b65af4d92b9f9>
+   a dcat:Dataset;
+   dcat:distribution :download_14ee3c95311a756edc9b65af4d92b9f9;
+.
