@@ -1,0 +1,25 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix nfo:        <http://www.semanticdesktop.org/ontologies/nfo/#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://locv.tw.rpi.edu/id/> .
+
+<http://locv.tw.rpi.edu/source/www-vision-jhu-edu/dataset/hopkins-155>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "www-vision-jhu-edu";
+   conversion:dataset_identifier "hopkins-155";
+   prov:wasDerivedFrom :download_0320bf83231732891d2419cbff0d1fa9;
+.
+
+:download_0320bf83231732891d2419cbff0d1fa9
+   a dcat:Distribution;
+   dcat:downloadURL <http://www.vision.jhu.edu/downloads_4_16_13_NoLogin/fetchdata.php?id=1>;
+.
+
+<dataset/0320bf83231732891d2419cbff0d1fa9>
+   a dcat:Dataset;
+   dcat:distribution :download_0320bf83231732891d2419cbff0d1fa9;
+.
