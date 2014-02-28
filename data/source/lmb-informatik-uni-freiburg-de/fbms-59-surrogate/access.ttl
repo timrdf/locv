@@ -1,0 +1,25 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix nfo:        <http://www.semanticdesktop.org/ontologies/nfo/#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://locv.tw.rpi.edu/id/> .
+
+<http://locv.tw.rpi.edu/source/lmb-informatik-uni-freiburg-de/dataset/fbms-59-surrogate>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "lmb-informatik-uni-freiburg-de";
+   conversion:dataset_identifier "fbms-59-surrogate";
+   prov:wasDerivedFrom :download_e79b1f47ebf4db0b1c565e9ad0aa15b4;
+.
+
+:download_e79b1f47ebf4db0b1c565e9ad0aa15b4
+   a dcat:Distribution;
+   dcat:downloadURL <http://locv.tw.rpi.edu/source/lmb-informatik-uni-freiburg-de/file/bms-26-surrogate/version/2014-Feb-28/manual/moseg_dataset.zip>;
+.
+
+<dataset/e79b1f47ebf4db0b1c565e9ad0aa15b4>
+   a dcat:Dataset;
+   dcat:distribution :download_e79b1f47ebf4db0b1c565e9ad0aa15b4;
+.
