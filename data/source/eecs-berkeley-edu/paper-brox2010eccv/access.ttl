@@ -1,0 +1,25 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix nfo:        <http://www.semanticdesktop.org/ontologies/nfo/#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://locv.tw.rpi.edu/id/> .
+
+<http://locv.tw.rpi.edu/source/eecs-berkeley-edu/dataset/paper-brox2010eccv>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "eecs-berkeley-edu";
+   conversion:dataset_identifier "paper-brox2010eccv";
+   prov:wasDerivedFrom :download_618f2f8f0cf3b5fec0be6ccad18b86ac;
+.
+
+:download_618f2f8f0cf3b5fec0be6ccad18b86ac
+   a dcat:Distribution;
+   dcat:downloadURL <http://lmb.informatik.uni-freiburg.de/Publications/2010/Bro10c/brox_eccv10.pdf>;
+.
+
+<dataset/618f2f8f0cf3b5fec0be6ccad18b86ac>
+   a dcat:Dataset;
+   dcat:distribution :download_618f2f8f0cf3b5fec0be6ccad18b86ac;
+.
