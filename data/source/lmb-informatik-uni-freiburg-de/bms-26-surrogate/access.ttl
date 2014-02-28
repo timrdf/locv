@@ -11,15 +11,15 @@
    a void:Dataset, dcat:Dataset;
    conversion:source_identifier  "lmb-informatik-uni-freiburg-de";
    conversion:dataset_identifier "bms-26-surrogate";
-   prov:wasDerivedFrom :download_0320bf83231732891d2419cbff0d1fa9;
+   prov:wasDerivedFrom :download_626f3bb75911a75e524ae1e986dc7d19;
 .
 
-:download_0320bf83231732891d2419cbff0d1fa9
+:download_626f3bb75911a75e524ae1e986dc7d19
    a dcat:Distribution;
-   dcat:downloadURL <http://www.vision.jhu.edu/downloads_4_16_13_NoLogin/fetchdata.php?id=1>;
+   dcat:downloadURL <http://locv.tw.rpi.edu/source/vision-jhu-edu/file/hopkins-155/version/2014-Feb-28/source/Hopkins155.zip>;
 .
 
-<dataset/0320bf83231732891d2419cbff0d1fa9>
+<dataset/626f3bb75911a75e524ae1e986dc7d19>
    a dcat:Dataset;
-   dcat:distribution :download_0320bf83231732891d2419cbff0d1fa9;
+   dcat:distribution :download_626f3bb75911a75e524ae1e986dc7d19;
 .
