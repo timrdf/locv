@@ -7,9 +7,9 @@
 @prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
 @prefix :           <http://locv.tw.rpi.edu/id/> .
 
-<http://locv.tw.rpi.edu/source/www-vision-jhu-edu/dataset/hopkins-155>
+<http://locv.tw.rpi.edu/source/vision-jhu-edu/dataset/hopkins-155>
    a void:Dataset, dcat:Dataset;
-   conversion:source_identifier  "www-vision-jhu-edu";
+   conversion:source_identifier  "vision-jhu-edu";
    conversion:dataset_identifier "hopkins-155";
    prov:wasDerivedFrom :download_0320bf83231732891d2419cbff0d1fa9;
 .

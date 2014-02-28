@@ -6,10 +6,10 @@
 @prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
 @prefix :           <http://locv.tw.rpi.edu/id/> .
 
-<http://locv.tw.rpi.edu/source/www-vision-jhu-edu/dataset/hopkins-155>
+<http://locv.tw.rpi.edu/source/vision-jhu-edu/dataset/hopkins-155>
    foaf:page <http://www.vision.jhu.edu/data/hopkins155>;
 .
 
-<http://locv.tw.rpi.edu/source/www-vision-jhu-edu/dataset/hopkins-155>
+<http://locv.tw.rpi.edu/source/vision-jhu-edu/dataset/hopkins-155>
    foaf:page <http://www.cis.jhu.edu/~rvidal/publications/cvpr07-benchmark.pdf>;
 .
