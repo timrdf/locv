@@ -1,0 +1,59 @@
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix conversion: <http://purl.org/twc/vocab/conversion/> .
+@prefix dcat:       <http://www.w3.org/ns/dcat#> .
+@prefix void:       <http://rdfs.org/ns/void#> .
+@prefix nfo:        <http://www.semanticdesktop.org/ontologies/nfo/#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
+@prefix datafaqs:   <http://purl.org/twc/vocab/datafaqs#> .
+@prefix :           <http://locv.tw.rpi.edu/id/> .
+
+<http://locv.tw.rpi.edu/source/lmb-informatik-uni-freiburg-de/dataset/fbms-59>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "lmb-informatik-uni-freiburg-de";
+   conversion:dataset_identifier "fbms-59";
+   prov:wasDerivedFrom :download_04c6bd415f08c5bb2302d870d9abaeba;
+.
+
+:download_04c6bd415f08c5bb2302d870d9abaeba
+   a dcat:Distribution;
+   dcat:downloadURL <http://lmb.informatik.uni-freiburg.de/resources/datasets/FBMS_Trainingset.tar.gz>;
+.
+
+<dataset/04c6bd415f08c5bb2302d870d9abaeba>
+   a dcat:Dataset;
+   dcat:distribution :download_04c6bd415f08c5bb2302d870d9abaeba;
+.
+
+<http://locv.tw.rpi.edu/source/lmb-informatik-uni-freiburg-de/dataset/fbms-59>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "lmb-informatik-uni-freiburg-de";
+   conversion:dataset_identifier "fbms-59";
+   prov:wasDerivedFrom :download_9aa66ce339b3746b7ce4d586951d3eb5;
+.
+
+:download_9aa66ce339b3746b7ce4d586951d3eb5
+   a dcat:Distribution;
+   dcat:downloadURL <http://lmb.informatik.uni-freiburg.de/resources/datasets/FBMS_Testset.tar.gz>;
+.
+
+<dataset/9aa66ce339b3746b7ce4d586951d3eb5>
+   a dcat:Dataset;
+   dcat:distribution :download_9aa66ce339b3746b7ce4d586951d3eb5;
+.
+
+<http://locv.tw.rpi.edu/source/lmb-informatik-uni-freiburg-de/dataset/fbms-59>
+   a void:Dataset, dcat:Dataset;
+   conversion:source_identifier  "lmb-informatik-uni-freiburg-de";
+   conversion:dataset_identifier "fbms-59";
+   prov:wasDerivedFrom :download_016255cb51881fa85eeb0afa071b934a;
+.
+
+:download_016255cb51881fa85eeb0afa071b934a
+   a dcat:Distribution;
+   dcat:downloadURL <http://lmb.informatik.uni-freiburg.de/resources/datasets/fbms/pami2013_MoSeg_eval.tar.gz>;
+.
+
+<dataset/016255cb51881fa85eeb0afa071b934a>
+   a dcat:Dataset;
+   dcat:distribution :download_016255cb51881fa85eeb0afa071b934a;
+.
