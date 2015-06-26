@@ -1,0 +1,30 @@
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix frbr:    <http://purl.org/vocab/frbr/core#> .
+@prefix biro:    <http://purl.org/spar/biro/> .
+@prefix c4o:     <http://purl.org/spar/c4o/> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix prv:     <http://purl.org/net/provenance/ns#> .
+@prefix nif:     <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+
+@base <http://locv.tw.rpi.edu/source/cv-foundation-org/dataset/openaccess/> .
+
+<content_cvpr_2015/papers/Roth_Unconstrained_3D_Face_2015_CVPR_paper/in-text-ref/6>
+   prov:value "[6]";
+   a prv:Immutable,
+     nif:String, 
+     c4o:InTextReferencePointer;
+   c4o:denotes <content_cvpr_2015/papers/Roth_Unconstrained_3D_Face_2015_CVPR_paper/reference/6>;
+.
+
+<content_cvpr_2015/papers/Roth_Unconstrained_3D_Face_2015_CVPR_paper/reference/6>
+   a biro:BibliographicReference,
+     frbr:Expression;
+   dcterms:identifier """[6] M. Berger, A. Tagliasacchi, L. Seversky, P. Alliez, J. Levine, A. Sharf, and C. Silva.
+State of the Art in Surface Reconstruction from Point Clouds.
+EUROGRAPHICS star reports, 1(1):161–185, Apr. 2014.""";
+   biro:references <http://dx.doi.org/10.2312/egst.20141040>;
+.
+
+<http://dx.doi.org/10.2312/egst.20141040>
+   a frbr:Endeavor;
+.
