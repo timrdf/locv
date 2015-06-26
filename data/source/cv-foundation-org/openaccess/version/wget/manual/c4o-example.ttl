@@ -2,29 +2,52 @@
 @prefix frbr:    <http://purl.org/vocab/frbr/core#> .
 @prefix biro:    <http://purl.org/spar/biro/> .
 @prefix c4o:     <http://purl.org/spar/c4o/> .
+@prefix doco:    <http://purl.org/spar/doco/> .
 @prefix prov:    <http://www.w3.org/ns/prov#> .
 @prefix prv:     <http://purl.org/net/provenance/ns#> .
 @prefix nif:     <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+@prefix gold:    <http://purl.org/linguistics/gold/> .
 
 @base <http://locv.tw.rpi.edu/source/cv-foundation-org/dataset/openaccess/> .
 
+<http://locv.tw.rpi.edu/id/md5/401f9e0cad4bad121a3fea6f560b3f63>
+   prov:value "The majority of reconstruction algorithms take a point cloud as their input, including methods with surface-smoothness priors (e.g., tangent planes [17], moving least squares [1], radial basis function [10], Poisson surface reconstruction [22]), visibility-based methods [11], data-driven methods [29], etc.";
+   a prv:Immutable, nif:String, # My clarification on doco:Sentence
+     doco:Sentence;
+.
+
+<http://locv.tw.rpi.edu/id/md5/2f4d5be20ba5b15655c63b40c4e18e52>
+   prov:value "More details on the topic are in the state of the art report [6].";
+   a prv:Immutable, nif:String, # My clarification on doco:Sentence
+     doco:Sentence;
+   gold:precedes <http://locv.tw.rpi.edu/id/md5/401f9e0cad4bad121a3fea6f560b3f63>;
+.
+
 <content_cvpr_2015/papers/Roth_Unconstrained_3D_Face_2015_CVPR_paper/in-text-ref/6>
    prov:value "[6]";
-   a prv:Immutable,
-     nif:String, 
+   a prv:Immutable, # My clarification on c4o:InTextReferencePointer
+     nif:String,    # My clarification on c4o:InTextReferencePointer
      c4o:InTextReferencePointer;
    c4o:denotes <content_cvpr_2015/papers/Roth_Unconstrained_3D_Face_2015_CVPR_paper/reference/6>;
 .
 
 <content_cvpr_2015/papers/Roth_Unconstrained_3D_Face_2015_CVPR_paper/reference/6>
    a biro:BibliographicReference,
-     frbr:Expression;
+     frbr:Expression; # superclass of biro:BibliographicReference
    dcterms:identifier """[6] M. Berger, A. Tagliasacchi, L. Seversky, P. Alliez, J. Levine, A. Sharf, and C. Silva.
 State of the Art in Surface Reconstruction from Point Clouds.
 EUROGRAPHICS star reports, 1(1):161–185, Apr. 2014.""";
-   biro:references <http://dx.doi.org/10.2312/egst.20141040>;
+   biro:references    <http://dx.doi.org/10.2312/egst.20141040>;
+   frbr:realizationOf <http://dx.doi.org/10.2312/egst.20141040>; # My clarification on biro:references
 .
 
 <http://dx.doi.org/10.2312/egst.20141040>
-   a frbr:Endeavor;
+   a frbr:Endeavor, # range of biro:references
+     frbr:Work;     # range of frbr:realizationOf
+.
+
+<http://locv.tw.rpi.edu/id/md5/20853d3ef3ebc1db49f9bacbd071eac7>
+   prov:value "One of the most widely used methods is the Poisson surface reconstruction [22] due largely to its efficiency and reliability.";
+   a prv:Immutable, nif:String, # My clarification on doco:Sentence
+     doco:Sentence;
 .
