@@ -31,6 +31,7 @@
    a prv:Immutable, # My clarification on c4o:InTextReferencePointer
      nif:String,    # My clarification on c4o:InTextReferencePointer
      c4o:InTextReferencePointer;
+   dcterms:isPartOf <http://locv.tw.rpi.edu/id/md5/2f4d5be20ba5b15655c63b40c4e18e52>;
    c4o:denotes <content_cvpr_2015/papers/Roth_Unconstrained_3D_Face_2015_CVPR_paper/reference/6>;
 .
 
