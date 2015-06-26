@@ -20,7 +20,10 @@
    prov:value "More details on the topic are in the state of the art report [6].";
    a prv:Immutable, nif:String, # My clarification on doco:Sentence
      doco:Sentence;
-   gold:precedes <http://locv.tw.rpi.edu/id/md5/401f9e0cad4bad121a3fea6f560b3f63>;
+   gold:follows        <http://locv.tw.rpi.edu/id/md5/401f9e0cad4bad121a3fea6f560b3f63>;
+   prov:wasDerivedFrom <http://locv.tw.rpi.edu/id/md5/401f9e0cad4bad121a3fea6f560b3f63>; # should be a super of gold:follows
+   gold:precedes       <http://locv.tw.rpi.edu/id/md5/20853d3ef3ebc1db49f9bacbd071eac7>;
+   prov:hadDerivation  <http://locv.tw.rpi.edu/id/md5/20853d3ef3ebc1db49f9bacbd071eac7>; # should be a super of gold:precedes
 .
 
 <content_cvpr_2015/papers/Roth_Unconstrained_3D_Face_2015_CVPR_paper/in-text-ref/6>
