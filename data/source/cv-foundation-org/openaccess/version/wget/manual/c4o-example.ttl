@@ -1,3 +1,4 @@
+@prefix foaf:    <http://xmlns.com/foaf/0.1/>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix frbr:    <http://purl.org/vocab/frbr/core#> .
 @prefix biro:    <http://purl.org/spar/biro/> .
@@ -48,6 +49,7 @@ EUROGRAPHICS star reports, 1(1):161–185, Apr. 2014.""";
 <http://dx.doi.org/10.2312/egst.20141040>
    a frbr:Endeavor, # range of biro:references
      frbr:Work;     # range of frbr:realizationOf
+   foaf:isPrimaryTopicOf <http://diglib.eg.org/handle/10.2312/egst.20141040.161-185>;
 .
 
 <http://locv.tw.rpi.edu/id/md5/20853d3ef3ebc1db49f9bacbd071eac7>
