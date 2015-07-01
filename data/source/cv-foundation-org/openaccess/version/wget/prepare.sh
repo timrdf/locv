@@ -26,7 +26,7 @@ for pdf in `find 'source/www.cv-foundation.org/openaccess' -mindepth 3 -maxdepth
       mkdir -p $dir 
       echo "    $txt" 
       pdftotext $pdf $txt
-      #justify.sh $pdf $txt 'http://dbpedia.org/resource/Pdftotext'
+      justify.sh $pdf $txt 'http://dbpedia.org/resource/Pdftotext'
       echo
    fi
 done
