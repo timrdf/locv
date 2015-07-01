@@ -6,4 +6,9 @@
 #3> .
 #
 
-cr-publish.sh manual/c4o-example.ttl
+cr-publish.sh `find 'source/www.cv-foundation.org/openaccess' -mindepth 3 -maxdepth 3 -name *.pdf` \
+            automatic/www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Redi_6_Seconds_of_2014_CVPR_paper.txt \
+            automatic/www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Redi_6_Seconds_of_2014_CVPR_paper.txt.prov.ttl
+#              `find 'automatic/www.cv-foundation.org/openaccess' -name *.txt`      \
+#              `find 'automatic/www.cv-foundation.org/openaccess' -name *.prov.ttl` \
+              manual/c4o-example.ttl
