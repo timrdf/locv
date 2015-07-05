@@ -33,16 +33,18 @@ if [[ ! -e automatic/dblp.xml ]]; then
    gunzip -c source/dblp.uni-trier.de/xml/dblp.xml.gz > automatic/dblp.xml
 fi
 
-mkdir -p ../../src
-if [[ ! -e ../../src/Xerces-J-bin.2.11.0.tar.gz ]]; then
-   pushd ../../src
-      ln -s ../version/latest/source/dblp.uni-trier.de/db/about/simpleparser/*.java .
-      curl -O http://apache.osuosl.org//xerces/j/binaries/Xerces-J-bin.2.11.0.tar.gz
-   popd
-fi
+mkdir -p ../../src && pushd ../../src
 
-if [[ ! -e ../../src/xerces-2_11_0 ]]; then
-   pushd ../../src
-      tar xzf Xerces-J-bin.2.11.0.tar.gz
-   popd
-fi
+   # http://dblp.dagstuhl.de/faq/How+to+parse+dblp+xml.html
+   #if [[ ! -e Xerces-J-bin.2.11.0.tar.gz ]]; then
+   #   curl -O http://apache.osuosl.org//xerces/j/binaries/Xerces-J-bin.2.11.0.tar.gz
+   #fi
+
+   #if [[ ! -e xerces-2_11_0 ]]; then
+   #   tar xzf Xerces-J-bin.2.11.0.tar.gz
+   #fi
+
+   ln -sf ../version/latest/source/dblp.uni-trier.de/db/about/simpleparser/*.java .
+   javac -Xlint:unchecked *.java
+   java -classpath . -mx900M -DentityExpansionLimit=1000000 Parser ../version/latest/automatic/dblp.xml > ../version/latest/automatic/out.txt
+popd
