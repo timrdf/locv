@@ -15,5 +15,7 @@
 mkdir -p source && pushd source
    web_directory='http://dblp.uni-trier.de/xml/'
    wget --mirror -e robots=off --no-parent --exclude-directories=release --reject "*.html*" $web_directory
+   web_directory='http://dblp.uni-trier.de/db/about/simpleparser'
+   wget --mirror -e robots=off --no-parent $web_directory
 popd
 
