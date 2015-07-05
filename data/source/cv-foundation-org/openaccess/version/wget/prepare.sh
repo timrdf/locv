@@ -12,21 +12,31 @@
 #3>      <https://github.com/timrdf/csv2rdf4lod-automation/wiki/tic-turtle-in-comments>;
 #3> .
 
-mkdir -p automatic
 for pdf in `find 'source/www.cv-foundation.org/openaccess' -mindepth 3 -maxdepth 3 -name *.pdf`; do
-
-   echo $pdf
+   echo $pdf                      # source/www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Redi_6_Seconds_of_2014_CVPR_paper.pdf
    dir=`dirname $pdf | sed 's/^source/automatic/'`
    base=`basename $pdf`
-   base=${base/%pdf/txt}
-   txt="$dir/$base"
 
+   txt="$dir/${base/%pdf/txt}"    # automatic/www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Redi_6_Seconds_of_2014_CVPR_paper.txt
    if [[ ! -e $txt ]]; then
       echo "    $dir"
       mkdir -p $dir 
       echo "    $txt" 
       pdftotext $pdf $txt
       justify.sh $pdf $txt 'http://dbpedia.org/resource/Pdftotext'
+      echo
+   fi
+
+   htm=${pdf/\/papers\//\/html\/} # source/www.cv-foundation.org/openaccess/content_cvpr_2014/html/Redi_6_Seconds_of_2014_CVPR_paper.html
+   htm=${htm/%pdf/html}
+   dir=`dirname $htm | sed 's/^source/automatic/'`
+   base=`basename $htm`
+   tidy="$dir/$base"
+   if [[ -e "$htm" && ! -e "$tidy" ]]; then
+      echo "    $dir"
+      mkdir -p $dir 
+      echo "    $tidy" 
+      tidy.sh "$htm" > "$tidy"
       echo
    fi
 done
