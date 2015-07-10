@@ -44,7 +44,8 @@ mkdir -p ../../src && pushd ../../src
    #   tar xzf Xerces-J-bin.2.11.0.tar.gz
    #fi
 
-   ln -sf ../version/latest/source/dblp.uni-trier.de/db/about/simpleparser/*.java .
-   javac -Xlint:unchecked *.java
-   java -classpath . -mx900M -DentityExpansionLimit=1000000 Parser ../version/latest/automatic/dblp.xml > ../version/latest/automatic/out.txt
+   # More fruitful, but still not needed:
+   #ln -sf ../version/latest/source/dblp.uni-trier.de/db/about/simpleparser/*.java .
+   #javac -Xlint:unchecked *.java
+   #java -classpath . -mx900M -DentityExpansionLimit=1000000 Parser ../version/latest/automatic/dblp.xml > ../version/latest/automatic/out.txt
 popd
