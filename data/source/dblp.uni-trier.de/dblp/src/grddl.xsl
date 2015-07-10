@@ -26,9 +26,9 @@
    <xsl:apply-templates select="dblp/article"/>
    <!--xsl:apply-templates select="dblp/inproceedings"/>
    <xsl:apply-templates select="dblp/www"/-->
-   <!--xsl:for-each-group select="dblp/*" group-by="local-name(.)">
-      <xsl:message select="current-grouping-key()"/>
-   </xsl:for-each-group-->
+   <xsl:for-each-group select="dblp/*" group-by="local-name(.)">
+      <xsl:message select="concat(count(current-group()),' ',current-grouping-key(),'s')"/>
+   </xsl:for-each-group>
    <!--
       article
       proceedings
@@ -79,15 +79,24 @@
       if (string-length(number)) then concat('    dblp:publishedInJournalVolumeIssue ',$DQ, number,  $DQ,';',$NL) else '',
       '    dblp:pageNumbers                   ',$DQ, pages,   $DQ,';',$NL)"/>
    <xsl:for-each select="ee">
-      <xsl:if test="not(contains(.,$LT)) and not(ends-with(.,'timedchall.pdf')) and not(ends-with(.,'colConc82.pdf'))">
-         <!-- <ee>http://dx.doi.org/10.1002/1521-3870(200108)47:3&lt;409::AID-MALQ409&gt;3.0.CO;2-L</ee>
-                 <http://www.acm.org/sigmod/record/issues/0109/e2-chairmsg.pdf">
-                 <http://dx.doi.org/10.1137/040604947\end{DOI> 
-                 <http://www.cs.auc.dk/\~luca/BEATCS/timedchall.pdf>
-                 <http://www.cs.auc.dk/\~luca/BEATCS/colConc82.pdf> -->
-         <xsl:value-of select="concat(
-            '    dblp:primaryElectronicEdition ',  $LT, replace(replace(.,concat($DQ,'$'),''),'\\end\{DOI',''),       $GT,';',$NL)"/>
-      </xsl:if>
+      <xsl:choose>
+         <xsl:when test="starts-with(.,'db/')">
+            <!-- 'db/journals/dr/Bertino00c.html' => 'http://dblp.uni-trier.de/db/journals/dr/Bertino00c.html' -->
+            <xsl:value-of select="concat(
+               '    dblp:primaryElectronicEdition ',  $LT, 'http://dblp.uni-trier.de/',., $GT,';',$NL)"/>
+         </xsl:when>
+         <xsl:when test="not(contains(.,$LT)) and not(ends-with(.,'timedchall.pdf')) and not(ends-with(.,'colConc82.pdf'))">
+            <!-- <ee>http://dx.doi.org/10.1002/1521-3870(200108)47:3&lt;409::AID-MALQ409&gt;3.0.CO;2-L</ee>
+                    <http://www.acm.org/sigmod/record/issues/0109/e2-chairmsg.pdf">
+                    <http://dx.doi.org/10.1137/040604947\end{DOI> 
+                    <http://www.cs.auc.dk/\~luca/BEATCS/timedchall.pdf>
+                    <http://www.cs.auc.dk/\~luca/BEATCS/colConc82.pdf> -->
+            <xsl:value-of select="concat(
+               '    dblp:primaryElectronicEdition ',  $LT, replace(replace(.,concat($DQ,'$'),''),'\\end\{DOI',''),       $GT,';',$NL)"/>
+         </xsl:when>
+         <xsl:otherwise>
+         </xsl:otherwise>
+      </xsl:choose>
    </xsl:for-each>
    <xsl:value-of select="concat(
       '    owl:sameAs                    ',$LT,'http://dblp.org/rec/',@key,$GT,';',$NL,
